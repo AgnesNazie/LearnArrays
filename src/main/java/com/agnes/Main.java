@@ -6,6 +6,7 @@ public class Main {
         exe2();
         exe3();
         exe4();
+        exe5();
     }
 
     public static void exe1() {
@@ -64,12 +65,32 @@ public class Main {
         for (int i = 0; i < numbers.length / 2; i++) {
             reverse = numbers[i];
             numbers[i] = numbers[numbers.length - 1 - i];
-            numbers[numbers.length - 1 -i] = reverse;
+            numbers[numbers.length - 1 - i] = reverse;
         }
         for (int number : numbers) {
             System.out.print(number);
         }
 
     }
-}
 
+    public static void exe5() {
+        //count how many numbers are odd and even in the array [3,4,7,8,10]
+        System.out.println("\nEXERCISE 5");
+        // declare and initialise arrays
+        int[] numbers = {3, 4, 7, 8, 10};
+        // declare and initialise variables to store the odd and even numbers
+        int odd = 0;
+        int even = 0;
+        // loop to count numbers
+        for (int number : numbers) {
+            // check if number is even
+            if (number % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+        System.out.print("The oddcount: " + odd);
+        System.out.print("\nThe evencount: " + even);
+    }
+}
