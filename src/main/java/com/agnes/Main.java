@@ -7,6 +7,7 @@ public class Main {
         exe3();
         exe4();
         exe5();
+        exe6();
     }
 
     public static void exe1() {
@@ -92,5 +93,20 @@ public class Main {
         }
         System.out.print("The oddcount: " + odd);
         System.out.print("\nThe evencount: " + even);
+    }
+    public static void exe6() {
+        // calculate the average of array elements[1,2,3,4,5,]
+        System.out.println("\nEXERCISE 6");
+        //declare and initialize array elements
+         int [] numbers = {1,2,3,4,5};
+         //declare and initialize variable to store data
+        int sum = 0;
+        //loop and calculate the sum
+        for (int number :numbers) {
+            sum += number;
+        }
+        //declare and initialize average
+        double average = (double) sum / numbers.length;
+        System.out.println("The Average is " + average);
     }
 }
